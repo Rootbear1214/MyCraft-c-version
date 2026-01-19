@@ -22,6 +22,11 @@ public class ModBlocks {
             BlockBehaviour.Properties.of().strength(1.5f, 6.0f),
             true);
 
+    public static final Block CLUSTER_BOMB = register("cluster_bomb",
+            ClusterBombBlock::new,
+            BlockBehaviour.Properties.of().strength(0.0f).ignitedByLava().forceSolidOn(),
+            true);
+
     private static Block register(String name, Function<BlockBehaviour.Properties, Block> blockFactory,
                                    BlockBehaviour.Properties settings, boolean shouldRegisterItem) {
         ResourceKey<Block> blockKey = ResourceKey.create(Registries.BLOCK,
@@ -43,6 +48,7 @@ public class ModBlocks {
 
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.BUILDING_BLOCKS).register(entries -> {
             entries.accept(HELLO_BRICK);
+            entries.accept(CLUSTER_BOMB);
         });
     }
 }

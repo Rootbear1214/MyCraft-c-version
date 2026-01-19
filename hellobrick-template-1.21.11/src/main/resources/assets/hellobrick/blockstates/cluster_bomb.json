@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "hellobrick:block/cluster_bomb"
+    }
+  }
+}
