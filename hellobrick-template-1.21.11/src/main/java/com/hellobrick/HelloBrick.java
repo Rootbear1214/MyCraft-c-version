@@ -2,6 +2,7 @@ package com.hellobrick;
 
 import com.hellobrick.block.ModBlocks;
 import com.hellobrick.entity.ModEntities;
+import com.hellobrick.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 
 import org.slf4j.Logger;
@@ -24,6 +25,7 @@ public class HelloBrick implements ModInitializer {
 		LOGGER.info("Hello Fabric world!");
 
 		ModBlocks.registerModBlocks();
+		ModItems.registerModItems();
 		ModEntities.registerModEntities();
 	}
 }

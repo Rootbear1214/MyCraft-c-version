@@ -1,4 +1,7 @@
 {
   "block.hellobrick.hello_brick": "Hello Brick",
-  "block.hellobrick.cluster_bomb": "Cluster Bomb"
+  "block.hellobrick.cluster_bomb": "Cluster Bomb",
+  "item.hellobrick.chicken_chaser_egg": "Chicken Chaser Egg",
+  "entity.hellobrick.chicken_chaser": "Chicken Chaser",
+  "entity.hellobrick.chicken_chaser_egg_projectile": "Chicken Chaser Egg"
 }
