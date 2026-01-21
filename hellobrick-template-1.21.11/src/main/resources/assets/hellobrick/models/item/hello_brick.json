@@ -1,3 +1,6 @@
 {
-  "parent": "hellobrick:block/hello_brick"
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "hellobrick:item/hello_brick"
+  }
 }

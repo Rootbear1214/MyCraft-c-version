@@ -1,3 +1,6 @@
 {
-  "parent": "hellobrick:block/cluster_bomb"
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "hellobrick:item/cluster_bomb"
+  }
 }
