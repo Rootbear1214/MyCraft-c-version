@@ -17,6 +17,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.redstone.Orientation;
 import net.minecraft.world.level.gameevent.GameEvent;
 import net.minecraft.world.phys.BlockHitResult;
 
@@ -37,6 +38,17 @@ public class ClusterBombBlock extends Block {
                 level.removeBlock(pos, false);
             }
         }
+    }
+
+    @Override
+    public void neighborChanged(BlockState state, Level level, BlockPos pos, Block block, Orientation orientation, boolean movedByPiston) {
+        if (!level.isClientSide() && level.hasNeighborSignal(pos)) {
+            primeBomb(level, pos, null);
+            level.removeBlock(pos, false);
+            return;
+        }
+
+        super.neighborChanged(state, level, pos, block, orientation, movedByPiston);
     }
 
     @Override
