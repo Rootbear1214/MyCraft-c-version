@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "D D",
+    "   ",
+    "   "
+  ],
+  "key": {
+    "D": "minecraft:dirt"
+  },
+  "result": {
+    "id": "minecraft:elytra",
+    "count": 1
+  }
+}
