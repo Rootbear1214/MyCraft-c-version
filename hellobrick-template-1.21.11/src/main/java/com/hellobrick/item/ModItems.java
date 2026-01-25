@@ -18,6 +18,10 @@ public class ModItems {
             ChickenChaserEggItem::new,
             new Item.Properties().stacksTo(16));
 
+    public static final Item PROTECTOR_WOLF_SPAWN_EGG = register("protector_wolf_spawn_egg",
+            ProtectorWolfSpawnEggItem::new,
+            new Item.Properties().stacksTo(16));
+
     private static Item register(String name, Function<Item.Properties, Item> itemFactory, Item.Properties settings) {
         ResourceKey<Item> itemKey = ResourceKey.create(Registries.ITEM,
                 Identifier.fromNamespaceAndPath(HelloBrick.MOD_ID, name));
@@ -30,6 +34,7 @@ public class ModItems {
 
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.TOOLS_AND_UTILITIES).register(entries -> {
             entries.accept(CHICKEN_CHASER_EGG);
+            entries.accept(PROTECTOR_WOLF_SPAWN_EGG);
         });
     }
 }

@@ -41,9 +41,19 @@ public class ModEntities {
                     .build(ResourceKey.create(Registries.ENTITY_TYPE, Identifier.fromNamespaceAndPath(HelloBrick.MOD_ID, "chicken_chaser_egg_projectile")))
     );
 
+    public static final EntityType<ProtectorWolfEntity> PROTECTOR_WOLF = Registry.register(
+            BuiltInRegistries.ENTITY_TYPE,
+            ResourceKey.create(Registries.ENTITY_TYPE, Identifier.fromNamespaceAndPath(HelloBrick.MOD_ID, "protector_wolf")),
+            EntityType.Builder.<ProtectorWolfEntity>of(ProtectorWolfEntity::new, MobCategory.CREATURE)
+                    .sized(0.6F, 0.85F)
+                    .clientTrackingRange(10)
+                    .build(ResourceKey.create(Registries.ENTITY_TYPE, Identifier.fromNamespaceAndPath(HelloBrick.MOD_ID, "protector_wolf")))
+    );
+
     public static void registerModEntities() {
         HelloBrick.LOGGER.info("Registering Mod Entities for " + HelloBrick.MOD_ID);
 
         FabricDefaultAttributeRegistry.register(CHICKEN_CHASER, ChickenChaserEntity.createAttributes());
+        FabricDefaultAttributeRegistry.register(PROTECTOR_WOLF, ProtectorWolfEntity.createAttributes());
     }
 }
